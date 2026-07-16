@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "tanning_patch_clone": {
+      "type": "tanning-patch-clone",
+      "settings": {
+        "cta_link": "/products/fitorun-transdermal-tanning-patch"
+      }
+    }
+  },
+  "order": [
+    "tanning_patch_clone"
+  ]
+}
