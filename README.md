@@ -1,1 +1,1 @@
-# SP_Theme_Pro
+# spf-theme_pro
