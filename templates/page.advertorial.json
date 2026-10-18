@@ -9,7 +9,8 @@
  */
 {
   "sections": {
+    "hide": { "type": "hide-header-footer", "settings": { "hide_header": true, "hide_announcements": true, "hide_footer": true } },
     "main": { "type": "fgn-advertorial", "settings": {} }
   },
-  "order": ["main"]
+  "order": ["hide", "main"]
 }
