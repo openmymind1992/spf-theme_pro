@@ -1,0 +1,117 @@
+<style>
+  .fga{--ink:#241a1f;--muted:#6b5a61;--accent:#9b2c4f;--line:#eadcd3;--soft:#fbf6f1;background:#fff;color:var(--ink);font-size:18px;line-height:1.75}
+  .fga *{box-sizing:border-box}
+  .fga-wrap{max-width:720px;margin:0 auto;padding:28px 16px 64px}
+  .fga-label{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:3px 8px;margin-bottom:14px}
+  .fga h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(30px,5.4vw,44px);line-height:1.18;margin:0 0 14px}
+  .fga h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(23px,3.6vw,30px);line-height:1.25;margin:40px 0 12px}
+  .fga-dek{font-size:20px;color:var(--muted);margin:0 0 18px}
+  .fga-by{font-size:14px;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:24px}
+  .fga-img{border-radius:14px;overflow:hidden;background:#f1e6de;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;color:var(--muted);text-align:center;margin:24px 0}
+  .fga-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .fga p{margin:0 0 18px}
+  .fga blockquote{margin:26px 0;padding:6px 0 6px 20px;border-left:4px solid var(--accent);font-family:Georgia,serif;font-size:22px;font-style:italic}
+  .fga-list{padding-left:0;list-style:none;margin:0 0 18px}
+  .fga-list li{padding:10px 0 10px 36px;position:relative;border-bottom:1px dashed var(--line)}
+  .fga-list li span{position:absolute;left:0;top:9px;font-size:20px}
+  .fga-box{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:22px;margin:30px 0}
+  .fga-box h3{font-family:Georgia,serif;margin:0 0 8px;font-size:22px}
+  .fga-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+  .fga-tile{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;font-size:16px}
+  .fga-tile b{display:block;font-size:17px;margin-bottom:4px}
+  .fga-cta{display:block;text-align:center;background:var(--accent);color:#fff !important;text-decoration:none;font-weight:700;font-size:18px;padding:17px 22px;border-radius:999px;margin:26px 0 8px}
+  .fga-cta:hover{filter:brightness(1.08)}
+  .fga-note{text-align:center;font-size:14px;color:var(--muted)}
+  .fga-disclose{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+  @media (max-width:600px){.fga{font-size:17px}.fga-grid{grid-template-columns:1fr}}
+</style>
+
+{%- assign cta_url = section.settings.cta_url | default: '/products/custom-song-a-personalized-song-made-from-your-story' -%}
+
+<article class="fga">
+  <div class="fga-wrap">
+    <span class="fga-label">Advertisement · {{ shop.name }}</span>
+    <h1>{{ section.settings.headline }}</h1>
+    <p class="fga-dek">{{ section.settings.dek }}</p>
+    <div class="fga-by">From the team at {{ shop.name }} · {{ 'now' | date: '%B %Y' }}</div>
+
+    <div class="fga-img">
+      {%- if section.settings.image_1 != blank -%}
+        {{ section.settings.image_1 | image_url: width: 1400 | image_tag: loading: 'eager', alt: section.settings.headline }}
+      {%- else -%}<p>Add an image or reaction-video still</p>{%- endif -%}
+    </div>
+
+    <p>Think about the last gift you gave that really landed. Not the one that got a polite "thank you" – the one that made someone stop, go quiet, and look at you differently.</p>
+    <p>For most of us, those moments are rare. Flowers wilt. Gift cards get forgotten in a drawer. Even jewelry, as beautiful as it is, can't say <em>why</em> you love someone.</p>
+    <p>That's exactly why personalized songs have become one of the most talked-about gifts online. People film the moment they press play – and the reactions say everything.</p>
+
+    <blockquote>A song with their name in it, about your story, is something nobody else on earth can give them.</blockquote>
+
+    <h2>Why a song hits differently than any other gift</h2>
+    <ul class="fga-list">
+      <li><span>🎵</span><strong>It's about them, line by line.</strong> Their name, your nickname for them, the place you met, the joke only your family gets.</li>
+      <li><span>🔁</span><strong>They'll play it again and again.</strong> On anniversaries, in the car, at family gatherings – long after other gifts are gone.</li>
+      <li><span>📱</span><strong>It's easy to share.</strong> A digital file plays on any phone, so grandparents, kids and friends can all hear it.</li>
+      <li><span>⏱️</span><strong>No shipping stress.</strong> It's delivered by email, so it works even when you're short on time.</li>
+    </ul>
+
+    <h2>Who it's for (spoiler: everyone you love)</h2>
+    <div class="fga-grid">
+      <div class="fga-tile"><b>💍 Your wife or husband</b>How you met, your wedding day, the life you've built together.</div>
+      <div class="fga-tile"><b>❤️ Girlfriend or boyfriend</b>Your first date, your songs, your future plans.</div>
+      <div class="fga-tile"><b>👩 Mom &amp; 👨 Dad</b>A thank-you for everything they never asked credit for.</div>
+      <div class="fga-tile"><b>👧 Daughter &amp; son</b>A song they'll keep from childhood into adulthood.</div>
+      <div class="fga-tile"><b>👵 Grandparents</b>Their stories, preserved in a song the whole family can play.</div>
+      <div class="fga-tile"><b>🕊️ In loving memory</b>A gentle way to honor someone who's no longer here.</div>
+    </div>
+
+    <div class="fga-img">
+      {%- if section.settings.image_2 != blank -%}
+        {{ section.settings.image_2 | image_url: width: 1400 | image_tag: loading: 'lazy', alt: 'Personalized song gift' }}
+      {%- else -%}<p>Add a second image (e.g. someone listening with headphones)</p>{%- endif -%}
+    </div>
+
+    <h2>How it works</h2>
+    <p><strong>1. Share your story.</strong> Answer a few questions: their name, your relationship, the occasion, a music style and your favorite memories. It takes about three minutes.</p>
+    <p><strong>2. We create the song.</strong> We turn your details into original lyrics and produce a full song with vocals using modern AI music tools. Our team reviews it before it goes out, so names and details come through right.</p>
+    <p><strong>3. Give the gift.</strong> You receive a private download link by email – within 7 days, 5 days, or 48 hours depending on your package. Then press play and watch their face.</p>
+
+    {%- if section.settings.sample_audio_url != blank -%}
+      <div class="fga-box">
+        <h3>🎧 Hear an example</h3>
+        <audio controls preload="none" style="width:100%" src="{{ section.settings.sample_audio_url }}"></audio>
+      </div>
+    {%- endif -%}
+
+    <h2>Christmas is the perfect moment</h2>
+    <p>The holidays are when families are finally in the same room. Imagine playing a song about your mom while everyone's gathered, or slipping in a song for your partner after the presents are opened. If you want it in time, it's best to order early – Rush delivery (48 hours) is there for the last-minute shoppers.</p>
+
+    <div class="fga-box">
+      <h3>What you get</h3>
+      <p style="margin:0 0 8px">✔ An original song written from your story<br>✔ Full production with vocals in the style you choose<br>✔ MP3 (plus WAV and lyrics PDF on Premium &amp; Rush)<br>✔ Free revisions included<br>✔ Delivered digitally – nothing to ship</p>
+      <p style="margin:0"><strong>Packages from $49.</strong> Full refund any time before production begins.</p>
+    </div>
+
+    <a class="fga-cta" href="{{ cta_url }}">{{ section.settings.cta_label }}</a>
+    <p class="fga-note">Takes about 3 minutes · Secure checkout · Delivered by email</p>
+
+    <p class="fga-disclose">This page is an advertisement for {{ shop.name }}. Songs are created with AI music tools based on the information you provide and reviewed by our team. Delivery times and revisions depend on the package you choose; see our <a href="/policies/refund-policy">Refund Policy</a> and <a href="/policies/terms-of-service">Terms</a>.</p>
+  </div>
+</article>
+
+{% schema %}
+{
+  "name": "FGN Advertorial",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "headline", "label": "Headline", "default": "The Gift That Makes People Cry (In the Best Way): Why a Song About Them Beats Anything You Can Wrap" },
+    { "type": "textarea", "id": "dek", "label": "Subheadline", "default": "For your partner, your parents, your kids or your grandparents – a personalized song turns your memories into something they'll replay for years." },
+    { "type": "image_picker", "id": "image_1", "label": "Top image" },
+    { "type": "image_picker", "id": "image_2", "label": "Middle image" },
+    { "type": "url", "id": "sample_audio_url", "label": "Sample audio URL" },
+    { "type": "text", "id": "cta_label", "label": "Button label", "default": "Create their song →" },
+    { "type": "url", "id": "cta_url", "label": "Button link (defaults to the Custom Song product)" }
+  ],
+  "presets": [{ "name": "FGN Advertorial" }]
+}
+{% endschema %}
